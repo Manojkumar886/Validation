@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statring RegularExpression</title>
+    <script>
+        let press1=()=>
+        {
+            let data=document.getElementById("newone").value
+            let reg=new RegExp("[0-9]","g");
+            // alert(reg.test(data))
+            // let full=document.getElementById("stwo").value
+            // let reg=new RegExp("[a-z]","g");
+            // console.log(reg.test(full))
+            let alpha=document.forms['hai'].fullname.value
+            alert(""+(/^[A-Za-z]+$/).test(alpha))
+        }
+    </script>
+</head>
+<body>
+    <form name="hai">
+    <input type="text" name="fullname" placeholder="Enter The fullname" />
+    <!-- <input type="text" id="stwo" placeholder="Enter The Fullname"/> -->
+    <input type="button" onclick="press1()" value="validate"/>
+    <!-- <output id="sweet"></output> -->
+</form>
+</body>
+</html>
